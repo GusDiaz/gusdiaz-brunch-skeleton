@@ -24,6 +24,7 @@
     "brunch": "^2.10.10",
     "coffee-script-brunch": "^2.10.2",
     "jquery": "^3.2.1",
+    "lato-font": "^3.0.0",
     "less-brunch": "^2.10.0",
     "pugjs-brunch": "^2.10.0",
     "sass-brunch": "^2.10.4",

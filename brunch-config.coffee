@@ -1,4 +1,6 @@
 module.exports =
+  server:
+    hostname: '0.0.0.0'
   files:
     javascripts:
       joinTo: 'app.js'
@@ -18,7 +20,8 @@ module.exports =
     globals: 
       jQuery: 'jquery',
       $: 'jquery',
-      bootstrap: 'bootstrap'    
+      bootstrap: 'bootstrap'
     styles:
-      bootstrap: ['dist/css/bootstrap.css']   
+      bootstrap: ['dist/css/bootstrap.css'],
+      "lato-font": ['css/lato-font.css']
   
