@@ -1,0 +1,11 @@
+[Unit]
+Description=Job that runs the cors-anywhere daemon
+Documentation=man:cors-anywhere(1)
+Type=forking
+
+[Service]
+ExecStart=/usr/bin/daemon -r /root/cors-anywhere/run.sh --output=/root/cors-anywhere/log.txt
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

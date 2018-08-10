@@ -1,0 +1,79 @@
+extends templates/layout.pug
+
+block content
+    #accordion.panel-group.custom-accordion-anchors-expanded.col-md-10.col-md-offset-1.col-sm-12.col-sm-offset-0.col-xs-12.col-xs-offset-0
+      .panel.panel-default.hide.panel_smn_interpretada
+        .panel-heading
+          h4.panel-title
+            a(data-toggle='collapse', data-parent='#accordion', href='#smn_interpretada')
+              | SMN Imagen Interpretada
+        #smn_interpretada.panel-collapse.collapse.in
+          .panel-body
+            .col-sm-12.text-center
+              img.smn_interpretada.img-responsive
+
+      .panel.panel-default.hide.panel_smn_potencial_tormentas
+        .panel-heading
+          h4.panel-title
+            a(data-toggle='collapse', data-parent='#accordion', href='#smn_potencial_tormentas')
+              | Potencial de Lluvias
+        #smn_potencial_tormentas.panel-collapse.collapse
+          .panel-body
+            .col-sm-12.text-center
+              img.smn_potencial_tormentas.img-responsive
+              .caption.smn_potencial_tormentas_data
+                  p
+                    | Fecha:
+                    span.fecha.leftSpace
+                  p
+                    | Número:
+                    span.numero.leftSpace
+                  p
+                    span.emision
+
+      .panel.panel-default.hide.panel_hydromet_bz_radar
+        .panel-heading
+          h4.panel-title
+            a(data-toggle='collapse', data-parent='#accordion', href='#hydromet_bz_radar')
+              | Radar Hydromet Belice
+        #hydromet_bz_radar.panel-collapse.collapse
+          .panel-body
+            .col-sm-12.text-center
+              img.img-responsive.hydromet_bz_radar(src='http://www.hydromet.gov.bz/images/stories/radar/400/latest_400kmloop.gif',onload="$('.panel_hydromet_bz_radar').removeClass('hide')")
+
+      .panel.panel-default.hide.panel_smnSatScrapper
+        .panel-heading
+          h4.panel-title
+            a(data-toggle='collapse', data-parent='#accordion', href='#smnSatScrapper')
+              | Satélite Península de Yucatán
+        #smnSatScrapper.panel-collapse.collapse
+          .panel-body
+            .col-sm-12.text-center
+              .smnSatScrapper.col-sm-12
+
+      .panel.panel-default.hide.panel_smnRadarSabancuyScrapper
+        .panel-heading
+          h4.panel-title
+            a(data-toggle='collapse', data-parent='#accordion', href='#smnRadarSabancuyScrapper')
+              | Radar Sabancuy
+        #smnRadarSabancuyScrapper.panel-collapse.collapse
+          .panel-body
+            .col-sm-12.text-center
+              .smnRadarSabancuyScrapper.col-sm-12
+
+      .panel.panel-default.hide.panel_noaaGulfSatellite
+        .panel-heading
+          h4.panel-title
+            a(data-toggle='collapse', data-parent='#accordion', href='#noaaGulfSatellite')
+              | NOAA Gulf Satellite
+        #noaaGulfSatellite.panel-collapse.collapse
+          .panel-body
+              .noaaGulfSatellite.text-center
+
+
+block jslibs
+  script(src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js')
+  script(src='//medialab.github.io/artoo/public/dist/artoo-latest.min.js')
+  script(type='text/javascript').
+    require('js/weather.coffee')
+    require('js/cors-ajax.js')

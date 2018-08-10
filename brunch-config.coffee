@@ -3,9 +3,9 @@ module.exports =
     hostname: '0.0.0.0'
   files:
     javascripts:
-      joinTo: 'app.js'
+      joinTo: 'weather.js'
     stylesheets:
-      joinTo: 'app.css'
+      joinTo: 'weather.css'
   plugins:
     autoReload:
       enabled:
@@ -16,12 +16,12 @@ module.exports =
         wrapper: 'commonjs'
         definition: 'commonjs'
   npm:
-    enabled: on,
-    globals: 
+    enabled: off,
+    globals:
       jQuery: 'jquery',
       $: 'jquery',
       bootstrap: 'bootstrap'
+      moment: 'moment'
     styles:
       bootstrap: ['dist/css/bootstrap.css'],
       "lato-font": ['css/lato-font.css']
-  
